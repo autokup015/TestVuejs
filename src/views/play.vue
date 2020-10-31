@@ -36,7 +36,9 @@
       </table>
     </div>
     <div class="footer">
-      <h2 class="font">{{ statusBattle }}</h2>
+      <div style="overflow: hidden;">
+        <h2 class="font">{{ statusBattle }}</h2>
+      </div>
       <input
         type="text"
         placeholder="Name"
@@ -443,8 +445,9 @@ export default {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  width: 7rem;
+  width: 7%;
   font-size: 20px;
+  overflow: hidden;
 }
 .btn:hover {
   opacity: 1;

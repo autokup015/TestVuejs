@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="text-align: center">
+    <div style="text-align: center;overflow: hidden;">
       <h1 class="font">History page</h1>
       <hr />
       <div style="display: flex; justify-content: center">
@@ -46,8 +46,9 @@ export default {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  width: 15rem;
+  width: 15%;
   font-size: 20px;
+  overflow: hidden;
 }
 .btn:hover {
   opacity: 1;

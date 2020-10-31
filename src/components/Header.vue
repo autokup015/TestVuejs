@@ -14,6 +14,7 @@ export default {
 .header {
   text-align: center;
   height: 5rem;
+  overflow: hidden;
 }
 .font {
   font-family: cursive, sans-serif;

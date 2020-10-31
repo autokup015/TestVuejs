@@ -7,7 +7,7 @@
       <div class="photo">
         <img
           src="https://image.winudf.com/v2/image1/Y29tLnRpY3RhY3RvZS5nbG93LmZyZWUuZ2FtZV9zY3JlZW5fMV8xNTkzMjcyMjA1XzAxMg/screen-1.jpg?fakeurl=1&type=.jpg"
-          style="width: 30rem"
+          style="width: 30%"
         />
       </div>
       <button @click="play" class="btn">Click to play</button>
@@ -40,10 +40,12 @@ export default {
   text-align: center;
   border: 3px solid transparent;
   height: 110px;
+  overflow: hidden;
 }
 .font {
   font-family: cursive, sans-serif;
   font-size: 60px;
+  overflow: hidden;
 }
 .photo {
   margin-top: 60px;
@@ -51,7 +53,7 @@ export default {
 .btn {
   font-family: cursive, sans-serif;
   border-radius: 12px;
-  background-color: #EE6CFF ;
+  background-color: #ee6cff;
   border: none;
   color: black;
   padding: 16px 32px;
@@ -64,8 +66,9 @@ export default {
   text-decoration: none;
   cursor: pointer;
   margin-top: 40px;
-  width: 20rem;
+  width: 20%;
   font-size: 30px;
+  overflow: hidden;
 }
 .btn:hover {
   opacity: 1;
