@@ -51,7 +51,7 @@
       >
         Done
       </button>
-      <button style="margin-left: 10px" class="btn" @click="reload">
+      <button style="margin-left: 10px" class="btn" @click="reset">
         Restart
       </button>
       <router-link to="/History"
@@ -96,81 +96,9 @@ export default {
     Header,
   },
   mounted() {
-    let myArray = [
-      "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-      "g",
-      "h",
-      "i",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "o",
-      "p",
-    ];
-
-    let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
-
-    console.log("Random :", randomItem);
-    if (randomItem == "a") {
-      this.a = "!";
-    }
-    if (randomItem == "b") {
-      this.b = "!";
-    }
-    if (randomItem == "c") {
-      this.c = "!";
-    }
-    if (randomItem == "d") {
-      this.d = "!";
-    }
-    if (randomItem == "e") {
-      this.e = "!";
-    }
-    if (randomItem == "f") {
-      this.f = "!";
-    }
-    if (randomItem == "g") {
-      this.g = "!";
-    }
-    if (randomItem == "h") {
-      this.h = "!";
-    }
-    if (randomItem == "i") {
-      this.i = "!";
-    }
-    if (randomItem == "j") {
-      this.j = "!";
-    }
-    if (randomItem == "k") {
-      this.k = "!";
-    }
-    if (randomItem == "l") {
-      this.l = "!";
-    }
-    if (randomItem == "m") {
-      this.m = "!";
-    }
-    if (randomItem == "n") {
-      this.n = "!";
-    }
-    if (randomItem == "o") {
-      this.o = "!";
-    }
-    if (randomItem == "p") {
-      this.p = "!";
-    }
+    this.reset();
   },
   methods: {
-    reload() {
-      location.reload();
-    },
     getPoint() {
       if (this.a == ":)") {
         this.Point++;
@@ -251,6 +179,77 @@ export default {
       this.o = "";
       this.p = "";
       this.Point = 0;
+
+      let myArray = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+      ];
+
+      let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
+
+      console.log("Random :", randomItem);
+      if (randomItem == "a") {
+        this.a = "!";
+      }
+      if (randomItem == "b") {
+        this.b = "!";
+      }
+      if (randomItem == "c") {
+        this.c = "!";
+      }
+      if (randomItem == "d") {
+        this.d = "!";
+      }
+      if (randomItem == "e") {
+        this.e = "!";
+      }
+      if (randomItem == "f") {
+        this.f = "!";
+      }
+      if (randomItem == "g") {
+        this.g = "!";
+      }
+      if (randomItem == "h") {
+        this.h = "!";
+      }
+      if (randomItem == "i") {
+        this.i = "!";
+      }
+      if (randomItem == "j") {
+        this.j = "!";
+      }
+      if (randomItem == "k") {
+        this.k = "!";
+      }
+      if (randomItem == "l") {
+        this.l = "!";
+      }
+      if (randomItem == "m") {
+        this.m = "!";
+      }
+      if (randomItem == "n") {
+        this.n = "!";
+      }
+      if (randomItem == "o") {
+        this.o = "!";
+      }
+      if (randomItem == "p") {
+        this.p = "!";
+      }
     },
     setValue(value) {
       if (value === "A" && this.a == "") {
@@ -306,36 +305,30 @@ export default {
     checkWinner() {
       this.swap();
       // x
-      this.checkWinn(this.a, this.b, this.c);
-      this.checkWinn(this.e, this.f, this.g);
-      this.checkWinn(this.i, this.j, this.k);
-      this.checkWinn(this.m, this.n, this.o);
-      this.checkWinn(this.b, this.c, this.d);
-      this.checkWinn(this.f, this.g, this.h);
-      this.checkWinn(this.j, this.k, this.l);
-      this.checkWinn(this.n, this.o, this.p);
+      this.checkWinn(this.a, this.b, this.c, this.d);
+      this.checkWinn(this.e, this.f, this.g, this.h);
+      this.checkWinn(this.i, this.j, this.k, this.l);
+      this.checkWinn(this.m, this.n, this.o, this.p);
       // y
-      this.checkWinn(this.a, this.e, this.i);
-      this.checkWinn(this.b, this.f, this.j);
-      this.checkWinn(this.c, this.g, this.k);
-      this.checkWinn(this.d, this.h, this.l);
-      this.checkWinn(this.e, this.i, this.m);
-      this.checkWinn(this.f, this.j, this.n);
-      this.checkWinn(this.g, this.k, this.o);
-      this.checkWinn(this.h, this.l, this.p);
-      // top right
-      this.checkWinn(this.a, this.f, this.k);
-      this.checkWinn(this.f, this.k, this.p);
-      this.checkWinn(this.e, this.j, this.o);
-      this.checkWinn(this.b, this.g, this.l);
-      // down left
-      this.checkWinn(this.c, this.f, this.i);
-      this.checkWinn(this.d, this.g, this.j);
-      this.checkWinn(this.g, this.j, this.m);
-      this.checkWinn(this.h, this.k, this.n);
+      this.checkWinn(this.a, this.e, this.i, this.m);
+      this.checkWinn(this.b, this.f, this.j, this.n);
+      this.checkWinn(this.c, this.g, this.k, this.o);
+      this.checkWinn(this.d, this.h, this.l, this.p);
+
+      // 45 c
+      this.checkWinn(this.a, this.f, this.k, this.p);
+      this.checkWinn(this.m, this.j, this.g, this.d);
     },
-    checkWinn(x, y, z) {
-      if (x == y && y == z && x != "" && y != "" && z != "") {
+    checkWinn(w, x, y, z) {
+      if (
+        w == x &&
+        x == y &&
+        y == z &&
+        w != "" &&
+        x != "" &&
+        y != "" &&
+        z != ""
+      ) {
         this.statusWinner = true;
         this.endgame();
       }
